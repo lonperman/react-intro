@@ -1,0 +1,192 @@
+#root {
+    margin: 0 24px;
+    position: relative;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #F2F4F5;
+    color: #1E1E1F;
+    font-family: 'Motserrat', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 48px;
+}
+
+//odo Counter
+.TodoCounter {
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 48px;
+    font-weight: normal;
+}
+
+.TodoCounter span {
+    font-weight: bold;
+}
+
+// Todo List
+.TodoList {
+    margin: 0;
+    padding: 0 0 56px 0;
+    list-style: none;
+}
+
+//Todo Item
+.TodoItem {
+    background-color: #FAFAFA;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+}
+
+.TodoItem-p {
+    margin: 24px 0 24px 24px;
+    width: calc(100% - 120px);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.TodoItem-p--complete {
+    text-decoration: line-through;
+}
+
+.Icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Icon-check {
+    position: absolute;
+    left: 12px;
+}
+
+.Icon-check--active {
+    color: #4CAF50;
+}
+
+.Icon-delete {
+    position: absolute;
+    top: -24px;
+    right: 0;
+}
+
+.Icon-delete:hover {
+    color: red;
+}
+
+
+
+//Todo Search
+.TodoSearch {
+    background: #F9FBFC;
+    border-radius: 2px;
+    border: 2px solid #202329;
+    margin: 0 24px;
+    height: 64px;
+    width: calc(100% - 62px);
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #1E1E1F;
+    box-shadow: 0px 5px 50px rgba(32,35,41,0.25);
+}
+
+.TodoSearch::placeholder {
+    color: #A5A5A5;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+.TodoSearch:focus {
+    outline-color: #61DAFA;
+}
+
+//Botton Add
+.CreateTodoButton {
+    background-color: #61DAFA;
+    box-shadow: 0px 5px 25px rgba(97,218,250,0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50px;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    font-weight: bold;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+
+    transform: rotate(0);
+    transition: .3s ease;
+}
+
+.CreateTodoButton:hover {
+    transform: rotate(224deg);
+}
+
+.Icon-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Icon-container-check {
+    position: absolute;
+    left: 12px;
+}
+
+.Icon-container-check--active {
+    color: #4caf50;
+}
+
+.Icon-container-delete {
+    position: absolute;
+    top: -24px;
+    right: 0;
+}
+
+.Icon-container-delete:hover {
+    color: red;
+}
+
+.Icon-svg {
+    width: 24px;
+    height: 24px;
+}
+
+.Icon-container-check:hover .Icon-svg {
+    fill: green;
+}
+  
+.Icon-container-delete:hover .Icon-svg {
+    fill: red;
+}
+  
