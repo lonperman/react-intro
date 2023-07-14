@@ -1,12 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
+import { TodoContext } from "../TodoContext";
 
-export const TodoSearch = ({
-  searchValue,
-  setSearchValue,
-}: {
-  searchValue: string;
-  setSearchValue: React.Dispatch<React.SetStateAction<string>>;
-}) => {
+export const TodoSearch = () => {
+  const {searchValue,setSearchValue} = useContext(TodoContext)
+  
   return (
     <input
       className="TodoSearch"

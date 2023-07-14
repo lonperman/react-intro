@@ -21,6 +21,8 @@ type TodoCounterProps = {
 
 type AppUiProps = {
   todos: Task[];
+  loading: boolean;
+  error: boolean;
   completedTodos: number;
   totalTodos: number;
   searchValue: string;
@@ -28,5 +30,7 @@ type AppUiProps = {
   searchedTodos: Task[];
   completedTodo: (text: string) => void;
   deletedTodo: (text: string) => void
+  openModal: boolean;
+  setOpenModal: (boolean: boolean) => void
 }
 
