@@ -1,8 +1,8 @@
-import React from "react";
+import React,{FC} from "react";
 import { AppUI } from "./AppUI";
 import { TodoProvider } from "../TodoContext";
 
-const App = () => {
+const App:FC = () => {
   return (
     <TodoProvider>
       <AppUI/>

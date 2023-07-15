@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { FC, useContext } from "react";
 import { TodoContext } from "../TodoContext";
 
 
-export const TodoCounter = () => {
+export const TodoCounter:FC = () => {
   const {completedTodos,totalTodos} = useContext(TodoContext)
   return (
     <h1 className="TodoCounter">

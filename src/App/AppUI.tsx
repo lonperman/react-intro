@@ -1,4 +1,4 @@
-import React from "react";
+import React, {FC} from "react";
 import { TodoCounter } from "../TodoCounter";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
@@ -9,8 +9,9 @@ import { TodosError } from "../TodosError";
 import { EmptyTodos } from "../EmptyTodos";
 import { TodoContext } from "../TodoContext";
 import { Modal } from "../Modal";
+import { TodoForm } from "../TodoForm";
 
-function AppUI() {
+export const AppUI: FC = () => {
     return (
         <div className="App">
             <TodoCounter />
@@ -57,10 +58,10 @@ function AppUI() {
                                     />
                                 ))}
                         </TodoList>
-                        <CreateTodoButton />
+                        <CreateTodoButton onClick={() => setOpenModal((state:boolean) => !state)} />
                         {openModal && (
                             <Modal>
-                                La funcionalidad de agregar TODO
+                                <TodoForm/>
                             </Modal>
                         )}
                     </>
@@ -70,5 +71,3 @@ function AppUI() {
         </div>
     );
 }
-
-export { AppUI };

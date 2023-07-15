@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { FC } from 'react'
 import ReactDOM from 'react-dom';
 
-function Modal({ children }: { children: React.ReactNode }) {
+type modalProps = { 
+    children: React.ReactNode 
+}
+
+export const Modal:FC<modalProps> = ({ children }) => {
     return ReactDOM.createPortal(
-        <div className='Modal'>
+        <div className='ModalBackground'>
             {children}
         </div>,
         document.getElementById('modal')!
     )
 }
-
-export { Modal }

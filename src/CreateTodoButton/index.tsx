@@ -1,10 +1,12 @@
-import React from "react";
+import React, { FC, ButtonHTMLAttributes } from "react";
 
-export const CreateTodoButton = () => {
+type Props = ButtonHTMLAttributes<HTMLButtonElement>
+
+export const CreateTodoButton:FC<Props> = ({...buttonProps}) => {
   return (
     <button
       className="CreateTodoButton"
-      onClick={() => console.log("le diste click")}
+      {...buttonProps}
     >
       +
     </button>

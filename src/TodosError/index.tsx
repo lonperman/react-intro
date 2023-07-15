@@ -1,6 +1,6 @@
-import React from "react";
+import React,{FC} from "react";
 
-export const TodosError = () => {
+export const TodosError:FC = () => {
   return (
    <p>Error...</p>
   );

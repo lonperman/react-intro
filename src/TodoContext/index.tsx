@@ -18,6 +18,15 @@ const TodoProvider:FC<PropsContext> = ({children}) =>{
       const [searchValue, setSearchValue] = useState<string>("");
       const [openModal, setOpenModal] = useState<boolean>(false);
     
+      const addTodo = (text: string) => {
+        const newTodos: Task[] = [...todos];
+        newTodos.push({
+          text,
+          completed: false
+        })
+        saveTodos(newTodos);
+      }
+      
       const completedTodos = todos.filter((todo: { completed: boolean; }) => !!todo.completed).length;
     
       const totalTodos = todos.length;
@@ -56,10 +65,12 @@ const TodoProvider:FC<PropsContext> = ({children}) =>{
             searchValue,
             setSearchValue,
             searchedTodos,
+            addTodo,
             completedTodo,
             deletedTodo,
             openModal,
             setOpenModal,
+            
         }}>
             {children}
         </TodoContext.Provider>

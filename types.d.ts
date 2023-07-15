@@ -31,6 +31,8 @@ type AppUiProps = {
   completedTodo: (text: string) => void;
   deletedTodo: (text: string) => void
   openModal: boolean;
-  setOpenModal: (boolean: boolean) => void
+  setOpenModal: (value: boolean | ((prevState: boolean) => boolean)) => void;
+  addTodo: (text: string) => void;
+
 }
 

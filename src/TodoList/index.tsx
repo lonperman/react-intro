@@ -1,6 +1,6 @@
-import React from 'react'
+import React,{FC} from 'react'
 
-export const TodoList = ({children}:TodoListProps) => {
+export const TodoList:FC<TodoListProps> = ({children}) => {
   return (
     <ul className='TodoList'>
         {children}
